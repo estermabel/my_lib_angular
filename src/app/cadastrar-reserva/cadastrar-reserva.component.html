@@ -1,6 +1,6 @@
 <form [formGroup]="formLami" (ngSubmit)="agendarReserva()">
   <div class="container-fluid col-md-6 container-form">
-    <h2 class="titulo">Reservar Livro</h2>
+    <h2 class="titulo">Alugar Livro</h2>
     <div class="row my-3">
       <div class="row my-3">
         <div class="col">
@@ -32,7 +32,7 @@
             required="true"
             class="form-select"
             aria-label="Default select example"
-            formControlName="laboratorio"
+            formControlName="livro"
           >
             <option *ngFor="let lami of lamis" value="{{ lami.id }}">
               {{ lami.nome }}
@@ -40,7 +40,7 @@
           </select>
           <span
             class="text-danger"
-            *ngIf="submitted && formLami.controls.laboratorio.errors?.required"
+            *ngIf="submitted && formLami.controls.livro.errors?.required"
           >
             Campo obrigatório.
           </span>
@@ -67,7 +67,7 @@
       </div>
 
       <span class="text-danger" *ngIf="dataInvalida">
-        não é possível reservar este laboratório nesta data e horário.
+        não é possível alugar este livro nesta data.
       </span>
 
       <button type="submit" class="btn btn-success btn-agendar">AGENDAR</button>
