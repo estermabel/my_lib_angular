@@ -1,0 +1,16 @@
+@import '~bootstrap/dist/css/bootstrap.min.css';
+
+.btn-agendar {
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 25px;
+  width: 146px;
+}
+
+.container-form {
+  margin-top: 25px;
+}
+
+.titulo {
+  text-align: center;
+}
